@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>TIM-2W2 - Exercice 2</title>
+	<link rel="icon" type="image/png" href="favicon.png" sizes="all">
+
+	<!-- Intégration de la police de caractères Web -->
+	<!-- Polices Google Roboto/Roboto Slab -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;900&display=swap" rel="stylesheet">
+    
+	<!-- Intégration des styles -->
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <div class="amorce">
+        <h1>L'&oelig;il sur<br>le fleuve</h1>
+        <p>Récits de voyages, photos, trucs et trouvailles dans le Bas-Saint-Laurent.</p>
+        <a class="btn btn-rond" href="#vedette">&#x27A4;</a>
+    </div>
+    <div id="vedette">
+        <header>
+            <h1><a href="">L'&oelig;il sur le fleuve</a></h1>
+            <nav>
+                <a href="#bio">Bio</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+        <article>
+            <div class="date-avec-lignes">18 septembre 2022</div>
+            <h2>Randonnée pédestre dans le sentier du Cabouron</h2>
+            <section class="description">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, sed. Beatae assumenda, atque deserunt at nobis sapiente soluta facilis nulla!
+                </p>
+            </section>
+            <section class="photos">
+                <!-- 
+                    [Étape 2 : images adaptatives avec l'élément **PICTURE**]
+                    Remplacez l'élément IMG ci-dessous par un élément PICTURE 
+                    contenant les éléments SOURCE et l'élément IMG adéquats.
+                    Utilisez adéquatement les 4 fichiers images fournis : 
+                        cabouron_telephone.jpg, 
+                        cabouron_telephone_paysage.jpg,
+                        cabouron_tablette.jpg, 
+                        cabouron_bureau.jpg
+                    La mise en page étant 'mobile first', l'image du fichier 
+                    cabouron_telephone.jpg est utilisée par défaut.
+                -->
+                <picture>
+                    <source media="(min-width: 992px)" srcset="images/cabouron_bureau.jpg">
+                    <source media="(min-width: 768px)" srcset="images/cabouron_tablette.jpg">
+                    <source media="(min-width: 576px)" srcset="images/cabouron_telephone_paysage.jpg">
+                    <img src="images/cabouron_telephone.jpg" alt="Vue du sentier du Caburon vers Le Kamouraska">
+                </picture>
+            </section>
+            <div class="btn btn-lire-article">Lire l'article</div>
+        </article>
+    </div>
+</body>
+
+</html>

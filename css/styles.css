@@ -1,0 +1,321 @@
+/* Normalisation supplémentaire 
+=============================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styles de base
+=============================================== */
+html {
+    width: 100vw;
+    height: 100vh;
+    max-width: 100%;
+    font-family: 'Roboto Slab', serif;
+    font-size: clamp( 14px, 0.75rem + 1vw, 22px);
+    scroll-behavior: smooth;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    /* 
+        [À noter]
+        La propriété suivante change selon la largeur du viewport pour l'élément ciblé dans cette règle.
+    */
+    background-image: url(../images/fond_telephone.jpg);
+}
+
+h1, h2, nav {
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    margin-bottom: 0.5rem;
+}
+
+a, a:hover, a:visited, a:link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 400ms;
+}
+
+a:hover {
+    color: darkorange;
+}
+
+/* Styles spécifiques à la page
+=============================================== */
+/* Amorce */
+.amorce {
+    /* 
+        [À noter]
+        La propriété suivante change selon la largeur du viewport pour l'élément ciblé dans cette règle.
+    */
+    width: 95vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ccc;
+}
+
+
+.amorce h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.amorce p {
+    font-family: 'Roboto Slab', serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    font-style: italic;
+    text-align: center;
+}
+
+/* Bouton "continuez" (flèche vers le bas) */
+.amorce .btn-rond {
+    display: inline-block;
+    text-align: center;
+    padding-top: 0.3rem;
+    margin-top: 20vh;
+    width: 4rem;
+    height: 4rem;
+    font-size: 3rem;
+    line-height: 3rem;
+    transform: rotate(90deg);
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+/* En vedette */
+#vedette {
+    /* 
+        [À noter]
+        La propriété suivante change selon la largeur du viewport pour l'élément ciblé dans cette règle.
+    */
+    width: 95vw;
+    height: 100vh;
+    margin: 0px;
+    padding: 2vw;
+}
+
+/* Barre du logo/nav */
+#vedette header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 10px;
+    /* margin-bottom: 40px; */
+    border-bottom: 4px solid darkorange;
+    background-color: white;
+    padding: 0 3vw;
+    opacity: 0.5;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+
+nav a {
+    margin-left: 10px;
+}
+
+/* Contenu de l'article */
+article {
+    background-color: white;
+    padding: 5vw 3vw;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+}
+
+.date-avec-lignes {
+    text-align: center;
+    position: relative;
+    margin: 2vw 0;
+}
+
+/* Les lignes autour de la date de l'article */
+.date-avec-lignes::before,
+.date-avec-lignes::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: calc(50% - 6rem);
+    border-top: solid 2px;
+    border-top-color: #bbb;
+}
+
+.date-avec-lignes::after {
+    right: 0;
+}
+
+/* Titre de l'article */
+article h2 {
+    /* 
+        [À noter]
+        La propriété suivante change selon la largeur du viewport pour l'élément ciblé dans cette règle.
+    */
+    margin: 3vw;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+/* Les sections de l'article */
+article section {
+    margin-bottom: 2vw;
+    text-align: center;
+}
+
+/* Description de l'article */
+section.description {
+    font-style: italic;
+    /* 
+        [À noter]
+        La propriété suivante change selon la largeur du viewport pour l'élément ciblé dans cette règle.
+    */
+    line-height: 1.25rem;
+}
+
+section.description p {
+    margin: 0 10vw;
+}
+
+/* Photo accompagnant l'article */
+section.photos img {
+    /* 
+        [À noter]
+        La propriété suivante change selon la largeur du viewport pour l'élément ciblé dans cette règle.
+    */
+    width: 100%;
+}
+
+/* Bouton "lire l'article" */
+.btn-lire-article {
+    display: inline-block;
+    padding: 2vw;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    margin: 2vw auto;
+    color: inherit;
+    border-color: inherit;
+}
+
+/* Tous les boutons de la page */
+.btn {
+    cursor: pointer;
+    transition: color 400ms, border-color 400ms;
+}
+
+.btn:hover {
+    color: darkorange;
+    border-color: darkorange;
+}
+
+/* Requêtes média
+=============================================== */
+/*  
+    [Étape 1 : Requêtes média]
+    Ajoutez ici les 3 requêtes média ciblant les 3 principaux "types" d'appreils aux points d'arrêts spécifiés 
+    dans l'énoncé. Remarquez que le code CSS de départ est celui qui convient à un téléphone mobile en mode 
+    portrait (orientation).
+*/
+
+/*-----------------------------Telephone Paysage-----------------------*/
+@media all and (min-width: 576px){
+body{
+    background-image: url(../images/fond_telephone_paysage.jpg);
+}
+
+.amorce{
+    width: 85vw;
+}
+
+#vedette{
+    width: 90vw;
+}
+
+article h2{
+   font-size:clamp(24.5px, 1vw + 0.75rem, 38.5px);
+}
+
+article section{
+    font-size:clamp(21px, 1vw + 0.75rem, 33px);
+}
+
+section .photo img{
+    width: 95%;
+}
+}
+
+/*------------------------------Tablette----------------------------------*/
+@media all and (min-width: 768px){
+body{
+    background-image: url(../images/fond_tablette.jpg);
+}
+.amorce{
+    width: 80vw;
+}
+
+#vedette{
+    width: 85vw;
+}
+
+article h2{
+    font-size:clamp(28px, 1vw + 0.75rem, 44px);
+}
+
+article section{
+    font-size:clamp(24.5px, 1vw + 0.75rem, 38.5px);
+}
+
+section .photo img{
+    width: 90%;
+}
+}
+
+/*--------------------------------------Bureau-------------------------------*/
+@media all and (min-width: 992px){
+body{
+    background-image: url(../images/fond_bureau.jpg);
+}
+.amorce{
+    width: 70vw;
+}
+
+#vedette{
+    width: 80vw;
+}
+
+article h2{
+    font-size:clamp(35px, 1vw + 0.75rem, 55px);
+}
+
+article section{
+    font-size:clamp(28px, 1vw + 0.75rem, 44px);
+}
+
+section .photo img{
+    width: 80%;
+}
+}
+
+
